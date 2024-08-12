@@ -1,0 +1,1074 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    object-fit: cover;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+#check {
+    z-index: 2;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    appearance: none;
+    padding: 20px;
+    border: none;
+    border-radius: 0px;
+
+}
+.toggle {
+    width: 95vw;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 10px;
+    display: none;
+    align-items: start;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    z-index: 1;
+}
+
+.toggle1 {
+    font-size: 30px;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    z-index: 1;
+}
+
+.i2 {
+    display: none;
+}
+
+#check:checked ~ .toggle1 .i1{
+    display: none;
+}
+
+#check:checked ~ .toggle1 .i2{
+    display: flex;
+}
+
+#check:checked ~ .toggle{
+    display: flex;
+}
+
+.checks:checked ~ .ans {
+    display: flex;
+
+}
+
+.checks:checked ~ button i {
+    transform: rotate(180deg);
+}
+
+.checks:hover {
+    border: none;
+    cursor: pointer;
+}
+
+.checks {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    appearance: none;
+    padding: 20px;
+    border: none;
+    border-radius: 0px;
+    z-index: 2;
+}
+
+#check:hover {
+    cursor: pointer;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background {
+    transform: translateZ(-5px) scale(1.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.navbar {
+    width: 1300px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 10px;
+    z-index: 1;
+}
+
+.navlogo img {
+    height: 70px;
+    width: 100px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.navlogo {
+    font-size: 18px;
+    color: #232323;
+    display: flex;
+    align-items: center;
+}
+
+.navbutton {
+    padding: 25px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #28be12;
+    color: #fffefe;
+    border: none;
+    border-radius: 50px;
+    transition: 0.4s;
+}
+
+
+
+.navbutton:hover {
+    background-color: #36e91b;
+}
+
+.navb {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    font-weight: 100;
+    color: #232323;
+    background-color: transparent;
+    transition: 0.4s;
+}
+
+.navb:hover {
+    background-color: rgba(21, 20, 20, 0.1);
+}
+
+.title {
+    text-align: center;
+    color: #fffefe;
+    position: relative;
+    top: 32vh;
+    text-shadow: 0 0 5px black;
+}
+
+.title h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+
+.title h4 {
+    font-size: 25px;
+    font-weight: 200;
+    padding-bottom: 40px;
+}
+
+.get {
+    padding: 20px 30px;
+    border: 2px solid #fffefe;
+    border-radius: 50px;
+    color: #fffefe;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.get:active {
+    background-color: #0c84d1;
+}
+
+section {
+    font-size: 40px;
+    padding: 100px 0px;
+    background-color: #ffffff;
+    text-align: center;
+    color: #232323;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section h2 {
+    margin-bottom: 50px;
+}
+
+.meet,
+.event {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-content: space-evenly;
+}
+
+.elem img {
+    height: 400px;
+    width: 23vw;
+    margin: .7vw;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.elem h4 {
+    padding: 20px 0px;
+    font-size: 40px;
+}
+
+.elem h6 {
+    font-size: 23px;
+    font-weight: 100;
+    padding-bottom: 20px;
+}
+
+
+.states {
+    padding: 150px 0px 0px 0px;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    justify-content: space-between;
+}
+
+.state h3 {
+    color: #28be12;
+    font-size: 90px;
+    font-weight: 600;
+}
+
+.state h5 {
+    color: #232323;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+
+.run {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: calc(100% + 400px);
+    left: -400px;
+}
+
+.run div {
+    font-size: 80px;
+    font-weight: 700;
+    color: #232323;
+    white-space: nowrap;
+    animation: animate 120s linear infinite;
+    animation-delay: -120s;
+}
+
+.run div:nth-child(2) {
+    animation: animatetwo 120s linear infinite;
+    animation-delay: -60s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animatetwo {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+.faqs {
+    background-color: #fff5e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+}
+
+.faq {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 30px;
+    position: relative;
+}
+
+.faqs h2 {
+    font-size: 60px;
+    text-align: center;
+    color: #010100;
+    padding-bottom: 40px;
+}
+
+.q1 {
+    color: #232323;
+    background-color: #ffffff;
+    font-size: 40px;
+    width: 75vw;
+    border: none;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+}
+
+.ans {
+    font-size: 25px;
+    padding: 20px 0px;
+    display: none;
+}
+
+.join {
+    background-color: #ffffff;
+    padding: 80px;
+    display: grid;
+    grid-template-columns: 700px 600px;
+    justify-content: center;
+}
+
+.text h2 {
+    font-size: 70px;
+    letter-spacing: -2px;
+    line-height: 1;
+    padding: 0px 10px 30px 0px;
+}
+
+.text p {
+    font-size: 22px;
+    padding: 10px;
+}
+
+.join img {
+    align-self: center;
+    height: 450px;
+    width: 650px;
+    border-radius: 50px;
+}
+
+.details {
+    text-align: start;
+    padding: 25px;
+}
+
+
+.orange {
+    background-color: #fe9814;
+    text-align: center;
+    padding: 90px 0px;
+}
+
+.orange img {
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.orange h2 {
+    font-size: 70px;
+    letter-spacing: -4px;
+}
+
+.orange h4 {
+    font-size: 23px;
+    font-weight: 100;
+    padding: 30px;
+    letter-spacing: -0.8px;
+}
+
+.orange button {
+    font-size: 25px;
+}
+
+.cheers {
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    justify-content: space-between;
+}
+
+.profile {
+    margin: 1vw;
+}
+
+.profile h6 {
+    font-size: 23px;
+    font-weight: 100;
+}
+
+.profile img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.profile h4 {
+    font-size: 25px;
+}
+
+.vid {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.icon i {
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 5px;
+    transition: 0.4s;
+}
+
+.ri-facebook-fill {
+    background-color: #1678f3;
+}
+
+.icon .ri-facebook-fill:hover {
+    background-color: #0b61ca;
+}
+
+.ri-twitter-x-line {
+    background-color: #010100;
+}
+
+.ri-instagram-line {
+    background-color: #f00075;
+}
+
+.icon .ri-instagram-line:hover {
+    background-color: #bd015d;
+}
+
+.ri-linkedin-fill {
+    background-color: #1da0f3;
+}
+
+.icon .ri-linkedin-fill:hover {
+    background-color: #0c84d1;
+}
+
+.touch {
+    background-color: #fff5e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 80px 80px;
+    justify-content: center;
+    align-content: center;
+}
+
+input {
+    padding: 30px;
+    border: 2px #f4ecdc solid;
+    border-radius: 50px;
+    font-size: 25px;
+    margin: 15px;
+    transition: 0.4s;
+}
+
+input:hover,
+textarea:hover {
+    border: 2px #2cbc14 solid;
+}
+
+.input-phone {
+    grid-column: 1 / 3;
+}
+
+textarea {
+    padding: 30px;
+    border: 2px #f4ecdc solid;
+    border-radius: 50px;
+    font-size: 25px;
+    margin: 15px;
+    grid-column: 1 / 3;
+    transition: 0.4s;
+}
+
+.touch button {
+    font-size: 25px;
+    padding: 20px;
+    margin: 20px 0px 150px 0px;
+}
+
+.contact {
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 700px;
+    padding: 40px 30px;
+    text-align: start;
+    font-size: 25px;
+}
+
+.contact p {
+    padding: 10px;
+}
+
+.contact a{
+    text-decoration-line: none;
+    color: #010100;
+    transition: 0.4s;
+    text-decoration-color: #474745d7;
+}
+
+.contact a:hover {
+    text-decoration-line: underline;
+}
+
+footer {
+    background-color: #010100;
+    color: #ffffff;
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footb {
+    background-color: #010100;
+    color: #ffffff;
+    border: none;
+    font-size: 40px;
+    padding: 1vw;
+}
+
+.footb:hover {
+    color: #aeadad;
+    text-decoration: underline;
+}
+
+.icons {
+    padding: 50px;
+}
+
+.icons i {
+    font-size: 40px;
+    color: #010100;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 5px;
+}
+
+
+footer p {
+    font-size: 25px;
+    padding: 20px;
+}
+
+.scroll div {
+    margin: 100px 0px 0px 0px;
+    height: 19.5vw;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 31.5vw;
+    justify-content: end;
+}
+
+@keyframes scrollleft {
+    from {
+        left: 60%;
+    }
+
+    to {
+        left: 200%;
+    }
+}
+
+.item {
+    width: 30vw;
+    height: 19.5vw;
+    position: relative;
+    border-radius: 30px;
+    animation: scrollleft linear;
+    animation-timeline: view();
+}
+
+.scrollrev div {
+    margin: 30px 0px;
+    height: 19.5vw;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 31.5vw;
+    justify-content: start;
+}
+
+@keyframes scrollright {
+    from {
+        background-color: blue;
+        right: 60%;
+    }
+
+    to {
+        background-color: green;
+        right: 200%;
+    }
+}
+
+.itemrev {
+    width: 30vw;
+    height: 19.5vw;
+    position: relative;
+    background-color: red;
+    border-radius: 30px;
+    animation: scrollright linear;
+    animation-timeline: view();
+}
+
+button:hover, i:hover {
+    cursor: pointer;
+}
+
+@media (min-width : 990px) and (max-width : 1400px) {
+    .title h1 {
+        font-size: 5.7vw;
+    }
+
+    .title h4 {
+        font-size: 1.8vw;
+    }
+
+    .get {
+        font-size: 1.7vw;
+    }
+
+    section h2 {
+        font-size: 4.3vw;
+    }
+
+    .elem h4 {
+        font-size: 2.8vw;
+    }
+
+    .elem h6 {
+        font-size: 1.6vw;
+    }
+
+    .state h3 {
+        font-size: 6.5vw;
+    }
+
+    .state h5 {
+        font-size: 2.8vw;
+    }
+
+    .run div {
+        font-size: 5.7vw;
+    }
+
+    .faqs h2 {
+        font-size: 4.2vw;
+    }
+
+    .q1 {
+        font-size: 2.8vw;
+    }
+
+    .ans {
+        font-size: 1.7vw;
+    }
+
+    .join h2 {
+        font-size: 5vw;
+    }
+
+    .join p {
+        font-size: 20px;
+    }
+
+    .join img {
+        width: 46.5vw;
+        height: 32.5vw;
+    }
+
+    .join {
+        grid-template-columns: 50vw 45vw;
+    }
+
+    .profile h4 {
+        font-size: 1.7vw;
+    }
+
+    .profile h6 {
+        font-size: 20px;
+    }
+
+    .cheers {
+        grid-template-columns: 32.5vw 32.5vw 32.5vw;
+    }
+
+    .contact p {
+        font-size: 20px;
+    }
+
+    footer .footb {
+        font-size: 2.8vw;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+
+    .navbar {
+        width: 95vw;
+    }
+}
+
+@media (min-width : 767px) and (max-width : 990px) {
+    .title h1 {
+        font-size: 65px;
+    }
+
+    .title h4 {
+        font-size: 20px;
+    }
+
+    .get {
+        font-size: 20px;
+    }
+
+    .state h3 {
+        font-size: 70px;
+    }
+
+    .state h5 {
+        font-size: 35px;
+    }
+
+    .run div {
+        font-size: 65px;
+    }
+
+    .q1 {
+        width: 83vw;
+    }
+
+    .join {
+        grid-template-columns: 90vw;
+    }
+
+    .join img {
+        width: 90vw;
+        margin-bottom: 50px;
+    }
+
+    .orange h2 {
+        font-size: 60px;
+    }
+
+    .orange h4 {
+        font-size: 20px;
+    }
+
+    .orange button {
+        font-size: 20px;
+    }
+
+    .form {
+        grid-template-columns: 48vw 48vw;
+    }
+
+    .touch button {
+        width: 92vw;
+    }
+
+    .contact {
+        width: 85vw;
+        font-size: 20px;
+    }
+
+    .meet,
+    .event {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .elem img {
+        width: 45vw;
+    }
+
+    .states,
+    .cheers {
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 50% 50%;
+    }
+
+    .state3 {
+        grid-column: 1 / 3;
+    }
+
+    .navbar {
+        width: 95vw;
+    }
+
+    .checks {
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width : 767px) {
+    .navbar {
+        width: 95vw;
+        margin: 5px;
+        top: 5px;
+    }
+
+    .navbar img {
+        height: 40px;
+        width: 60px;
+    }
+
+    .navbar .navbutton,
+    .navmid .navb {
+        display: none;
+    }
+
+    .title {
+        top: 25vh;
+    }
+
+    .title h1 {
+        font-size: 10vw;
+    }
+
+    .title h4 {
+        font-size: 18px;
+    }
+
+    .get {
+        font-size: 18px;
+    }
+
+    section h2 {
+        font-size: 8vw;
+    }
+
+    .meet,
+    .event {
+        grid-template-columns: 100%;
+    }
+
+    .elem img {
+        width: 95vw;
+    }
+
+    .elem h4 {
+        font-size: 30px;
+    }
+
+    .elem h6 {
+        font-size: 20px;
+    }
+
+    .elem button,
+    .orange button,
+    .touch button {
+        font-size: 18px;
+        padding: 15px 25px;
+    }
+
+    .states,
+    .cheers {
+        grid-template-columns: 80vw;
+    }
+
+    .state h3 {
+        font-size: 13vw;
+    }
+
+    .state h5 {
+        font-size: 5.5vw;
+    }
+
+    .run div {
+        font-size: 11.4vw;
+    }
+
+    .faqs h2 {
+        font-size: 8.4vw;
+    }
+
+    .q1 {
+        width: 83vw;
+        font-size: 5.5vw;
+    }
+
+    .ans {
+        font-size: 3.4vw;
+    }
+
+    .join h2 {
+        font-size: 10vw;
+    }
+
+    .join p {
+        font-size: 20px;
+    }
+
+    .join img {
+        height: 60vw;
+        width: 90vw;
+        margin-bottom: 50px;
+    }
+
+    .join {
+        grid-template-columns: 90vw;
+    }
+
+    .orange h2 {
+        font-size: 9vw;
+        letter-spacing: normal;
+    }
+
+    .orange h4 {
+        font-size: 20px;
+    }
+
+    .orange button {
+        font-size: 20px;
+    }
+
+    .profile h4 {
+        font-size: 20px;
+    }
+
+    .profile h6 {
+        font-size: 20px;
+    }
+
+    .form {
+        grid-template-columns: 48vw 48vw;
+    }
+
+    input {
+        grid-column: 1 / 3;
+    }
+
+    textarea {
+        margin: 0px 15px;
+    }
+
+    .touch button {
+        width: 92vw;
+    }
+
+    .contact {
+        width: 85vw;
+        font-size: 20px;
+    }
+
+    footer .footb {
+        font-size: 5vw;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+
+    .icon i,
+    .icons i {
+        font-size: 5vw;
+    }
+
+}
+
+@media (max-width : 500px) {
+    section h2 {
+        font-size: 40px;
+    }
+
+    .state h3 {
+        font-size: 60px;
+    }
+
+    .state h5 {
+        font-size: 28px;
+    }
+
+    .faqs h2 {
+        font-size: 35px;
+    }
+
+    .q1 {
+        font-size: 28px;
+    }
+
+    .ans {
+        font-size: 17px;
+    }
+
+    .faq {
+        padding: 20px;
+    }
+
+    .checks {
+        top: 1px;
+        right: 1px;
+    }
+}
+
+@media (min-width : 767px){
+    #check, .toggle, .toggle1 {
+        display: none;
+    }
+}
